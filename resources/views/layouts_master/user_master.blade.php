@@ -8,8 +8,6 @@
     <meta content="Responsive bootstrap 4 admin template" name="description">
     <meta content="Coderthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('manager/image/favicon.ico') }}">
     <!-- App css -->
     <link href="{{ asset('manager/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"
         id="bootstrap-stylesheet">

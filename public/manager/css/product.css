@@ -1,0 +1,48 @@
+.products {
+    box-sizing: border-box;
+    height: 200px;
+}
+
+.img-products {
+    width: 100%;
+    height: 75px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.text-product {
+    color: black;
+    font-size: 0.65rem;
+}
+
+.text-discount {
+    font-size: 0.55rem;
+    color: #808080;
+}
+
+.text-price {
+    font-size: 0.75rem;
+    color: red;
+}
+
+.rate {
+    color: #FFD700;
+    display: block;
+}
+
+.text-footer {
+    position: relative;
+}
+
+.address {
+    left: 0;
+    bottom: 0;
+    font-size: 0.55rem;
+}
+
+.create-at {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    font-size: 0.55rem;
+}
