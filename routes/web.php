@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.user.register');
+    return view('layout.manager.users.profile_user');
 });
 
 Route::prefix('manager')->group(function () {
