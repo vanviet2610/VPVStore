@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    @include('layout.clients.header')
+    @include('layout.clients.layout.header')
 
     <div class="body-content outer-top-xs" id="top-banner-and-menu">
         <div class="container">
@@ -33,7 +33,7 @@
         <!-- /.container -->
     </div>
 
-    @include('layout.clients.footer')
+    @include('layout.clients.layout.footer')
 
 
     <script src="{{ asset('clients/js/jquery-1.11.1.min.js') }}"></script>

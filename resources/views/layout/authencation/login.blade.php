@@ -12,7 +12,6 @@
                 </div>
                 <div class="card-body">
                     <form action="#" class="p-2">
-
                         <div class="form-group mb-3">
                             <label for="emailaddress">Email Address :</label>
                             <input class="form-control" type="email" id="emailaddress" required=""

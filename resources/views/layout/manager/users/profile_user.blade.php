@@ -107,6 +107,7 @@
                                                         <img class="img-products"
                                                             src="{{ asset('clients/images/products/p1.jpg') }}"
                                                             alt="">
+                                                        <span class="waiting badge badge-success">Đã duyệt</span>
                                                     </div>
                                                     <div class="product-content">
                                                         <span class="text-product">Văn việt 123123123 Văn việt

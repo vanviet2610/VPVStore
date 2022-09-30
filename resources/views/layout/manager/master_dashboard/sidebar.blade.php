@@ -11,22 +11,15 @@
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="ion-md-speedometer"></i>
-                        <span>  Người Dùng  </span>
+                        <span> Người Dùng </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="#" class="waves-effect">
                         <i class="ion-md-basket"></i>
-                        <span> Kho </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="nav-second-level" aria-expanded="false">
-
-                        <li><a href="#">Typography</a></li>
-                        <li><a href="ui-buttons.html">Buttons</a></li>
-             
-                    </ul>
+                        <span> Sản phẩm </span>
+                        </a>
                 </li>
 
                 <li>
@@ -41,11 +34,11 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);" aria-expanded="false">Level 1.2
-                            <span class="menu-arrow"></span>
-                        </a>
+                                <span class="menu-arrow"></span>
+                            </a>
                             <ul class="nav-third-level nav" aria-expanded="false">
                                 <li>
-                                    <a  >Level 2.1</a>
+                                    <a>Level 2.1</a>
                                 </li>
                                 <li>
                                     <a href="javascript: void(0);">Level 2.2</a>
