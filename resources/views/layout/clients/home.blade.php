@@ -1,4 +1,4 @@
-@extends('layout.client_master')
+@extends('layouts_master.client_master')
 @section('title')
     <title>Trang Chủ</title>
 @endsection
@@ -334,7 +334,7 @@
                     <div class="item">
                         <div class="products special-product">
                             <div class="product">
-                                
+
                                 <div class="product-micro">
                                     <div class="row product-micro-row">
                                         <div class="col col-xs-5">
@@ -957,7 +957,8 @@
         <div class="sidebar-widget  wow fadeInUp outer-top-vs ">
             <div id="advertisement" class="advertisement">
                 <div class="item">
-                    <div class="avatar"><img src="{{ asset('clients/images/testimonials/member1.png') }}" alt="Image"></div>
+                    <div class="avatar"><img src="{{ asset('clients/images/testimonials/member1.png') }}" alt="Image">
+                    </div>
                     <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc
                         condime tum metus eud molest sed consectetuer.<em>"</em></div>
                     <div class="clients_author">John Doe <span>Abc Company</span> </div>
