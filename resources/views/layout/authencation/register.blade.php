@@ -14,11 +14,11 @@
                     <h5 class="text-white font-13 mb-0">Tạo người dùng</h5>
                 </div>
                 <div class="card-body">
-                    <form action="#" class="p-2">
+                    <form action="{{ route('register') }}" class="p-2">
 
                         <div class="form-group mb-3">
                             <label for="emailaddress">Email :</label>
-                            <input class="form-control" type="email" id="emailaddress" required=""
+                            <input class="form-control" type="email" id="emailaddress"
                                 placeholder="john@deo.com">
                         </div>
 
@@ -49,7 +49,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-sm-12 text-center">
-                                <a href="pages-login.html">Bạn đã có tài khoản người dùng</a>
+                                <a href="{{ route('showLogin') }}">Bạn đã có tài khoản người dùng</a>
                             </div>
                         </div>
                     </form>

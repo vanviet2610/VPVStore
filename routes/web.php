@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts_master.client_master');
+    return view('layout.clients.home');
 });
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('showLogin');
+Route::get('register', [AuthController::class, 'showRegister'])->name('showRegister');
+Route::post('login', [AuthController::class, 'login'])->name('login');
+Route::post('register', [AuthController::class, 'login'])->name('register');
 
-Route::prefix('manager')->group(function () {
-    
+
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('user', UsersController::class);
 });

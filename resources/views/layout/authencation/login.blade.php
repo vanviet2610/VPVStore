@@ -8,22 +8,20 @@
         <div class="col-md-8 col-lg-6 col-xl-5">
             <div class="card mt-4">
                 <div class="card-header p-4 bg-primary">
-                    <h4 class="text-white text-center mb-0 mt-0">Velonic</h4>
+                    <h4 class="text-white text-center mb-0 mt-0">VPVStore Login</h4>
                 </div>
                 <div class="card-body">
-                    <form action="#" class="p-2">
+                    <form action="{{ route('login') }}" class="p-2">
                         <div class="form-group mb-3">
                             <label for="emailaddress">Email Address :</label>
-                            <input class="form-control" type="email" id="emailaddress" required=""
-                                placeholder="john@deo.com">
+                            <input class="form-control" type="email" id="emailaddress" placeholder="john@deo.com">
                         </div>
 
                         <div class="form-group mb-3">
                             <div class="hide-pass">
                                 <label for="password">Password :</label>
                                 <i class="fas fa-eye hide" id="icon-pass"></i>
-                                <input class="form-control" type="password" required="" id="password"
-                                    placeholder="Enter your password">
+                                <input class="form-control" type="password"id="password" placeholder="Enter your password">
                             </div>
                         </div>
 
@@ -41,8 +39,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-sm-12 text-center">
-                                <p class="text-muted mb-0">Tôi chưa có tài khoản người dùng? <a href="pages-register.html"
-                                        class="text-dark m-l-5"><b>Đăng ký</b></a></p>
+                                <p class="text-muted mb-0">Tôi chưa có tài khoản người dùng? <a
+                                        href="{{ route('showRegister') }}" class="text-dark m-l-5"><b>Đăng ký</b></a></p>
                             </div>
                         </div>
                     </form>
