@@ -21,7 +21,13 @@ class AuthController extends Controller
         return view('layout.authencation.register');
     }
 
-    public function store(Request $request)
+    public function login(Request $req)
     {
+        # code...
+    }
+
+    public function register(Request $request)
+    {
+        dd($request);
     }
 }

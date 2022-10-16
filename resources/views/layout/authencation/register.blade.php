@@ -14,30 +14,33 @@
                     <h5 class="text-white font-13 mb-0">Tạo người dùng</h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('register') }}" class="p-2">
-
-                        <div class="form-group mb-3">
+                    <form onsubmit="return validate()" action="{{ route('register') }}" method="POST" class="p-2">
+                        @csrf
+                        <div class="form-group">
                             <label for="emailaddress">Email :</label>
-                            <input class="form-control" type="email" id="emailaddress"
+                            <input class="form-control" type="text" name="email" id="email"
                                 placeholder="john@deo.com">
+                            <span class="text-danger ml-2" id="errors-email"></span>
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group">
                             <div class="hide-pass">
                                 <label for="password">Password :</label>
                                 <i class="fas fa-eye hide" id="icon-pass"></i>
-                                <input class="form-control" type="password" id="password"
+                                <input class="form-control" type="password" name="password" id="password"
                                     placeholder="Enter your password">
                             </div>
+                            <span class="text-danger ml-2" id="errors-password"></span>
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group">
                             <div class="hide-pass">
                                 <label for="password">Confirm Password :</label>
                                 <i class="fas fa-eye hide" id="icon-passconfirm"></i>
-                                <input class="form-control" type="password" id="password-confirm"
+                                <input class="form-control" type="password" name="re_password" id="re_password"
                                     placeholder="Enter your confirm password">
                             </div>
+                            <span class="text-danger ml-2" id="errors-re_password"></span>
                         </div>
 
                         <div class="form-group text-right mt-4 mb-4">
@@ -75,14 +78,17 @@
                     $('#icon-pass').addClass('hide');
                 } else {
                     $('#icon-pass').removeClass('hide');
+                    $('#password').removeClass('is-invalid');
+
                 }
             });
 
-            $('#password-confirm').keyup(function(e) {
+            $('#re_password').keyup(function(e) {
                 if ($(this).val() === '') {
                     $('#icon-passconfirm').addClass('hide');
                 } else {
                     $('#icon-passconfirm').removeClass('hide');
+                    $('#re_password').removeClass('is-invalid');
                 }
             });
 
@@ -99,15 +105,52 @@
             });
             $('#icon-passconfirm').click(function(e) {
                 e.preventDefault();
-                if ($('#password-confirm').attr('type') == 'password') {
+                if ($('#re_password').attr('type') == 'password') {
                     $(this).removeClass('fa-eye').addClass('fa-eye-slash');
-                    $('#password-confirm').attr('type', 'text');
+                    $('#re_password').attr('type', 'text');
                 } else {
                     $(this).removeClass('fa-eye-slash').addClass('fa-eye');
-                    $('#password-confirm').attr('type', 'password');
+                    $('#re_password').attr('type', 'password');
 
                 }
             });
+
         });
+
+        function validate() {
+
+            if ($('#email').val() === "") {
+                $('#errors-email').html("Email không được để trống");
+                $('#email').addClass('is-invalid');
+                return false;
+            } else {
+                $('#errors-email').html("");
+                $('#email').removeClass('is-invalid');
+
+            }
+
+            if ($('#password').val() === "") {
+                $('#errors-password').html("Mật khẩu không được để trống");
+                $('#password').addClass('is-invalid');
+                return false;
+
+            } else {
+                $('#errors-password').html("");
+                $('#password').removeClass('is-invalid');
+
+            }
+
+            if ($('#re_password').val() === "") {
+                $('#errors-re_password').html("Mật khẩu nhập lại không được để trống");
+                $('#re_password').addClass('is-invalid');
+                return false;
+
+            } else {
+                $('#errors-re_password').html("");
+                $('#re_password').removeClass('is-invalid');
+
+            }
+            return (true);
+        }
     </script>
 @endpush

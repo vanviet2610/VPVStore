@@ -11,10 +11,12 @@
                     <h4 class="text-white text-center mb-0 mt-0">VPVStore Login</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('login') }}" class="p-2">
+                    <form onsubmit="return validate()" method="POST" action="{{ route('login') }}" class="p-2">
+                        @csrf
                         <div class="form-group mb-3">
                             <label for="emailaddress">Email Address :</label>
-                            <input class="form-control" type="email" id="emailaddress" placeholder="john@deo.com">
+                            <input class="form-control" type="t" id="email" placeholder="john@deo.com">
+                            <span class="text-danger ml-2" id="errors-email"></span>
                         </div>
 
                         <div class="form-group mb-3">
@@ -23,6 +25,7 @@
                                 <i class="fas fa-eye hide" id="icon-pass"></i>
                                 <input class="form-control" type="password"id="password" placeholder="Enter your password">
                             </div>
+                            <span class="text-danger ml-2" id="errors-password"></span>
                         </div>
 
                         <div class="form-group mb-3">
@@ -65,6 +68,8 @@
                     $('#icon-pass').addClass('hide');
                 } else {
                     $('#icon-pass').removeClass('hide');
+                    $('#password').removeClass('is-invalid');
+
                 }
             });
 
@@ -76,9 +81,33 @@
                 } else {
                     $(this).removeClass('fa-eye-slash').addClass('fa-eye');
                     $('#password').attr('type', 'password');
-
                 }
             });
         });
+
+
+        function validate() {
+            if ($('#email').val() === "") {
+                $('#errors-email').html("Email không được để trống");
+                $('#email').addClass('is-invalid');
+                return false;
+            } else {
+                $('#errors-email').html("");
+                $('#email').removeClass('is-invalid');
+
+            }
+
+            if ($('#password').val() === "") {
+                $('#errors-password').html("Mật khẩu không được để trống");
+                $('#password').addClass('is-invalid');
+                return false;
+
+            } else {
+                $('#errors-password').html("");
+                $('#password').removeClass('is-invalid');
+
+            }
+            return true;
+        }
     </script>
 @endpush()
