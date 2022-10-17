@@ -6,6 +6,7 @@
 
 
 @section('content')
+   
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 col-xl-5">
             <div class="card mt-4">
@@ -27,7 +28,7 @@
                             <div class="hide-pass">
                                 <label for="password">Password :</label>
                                 <i class="fas fa-eye hide" id="icon-pass"></i>
-                                <input class="form-control" type="password" name="password" id="password"
+                                <input class="form-control" type="password" name="password" name="password" id="password"
                                     placeholder="Enter your password">
                             </div>
                             <span class="text-danger ml-2" id="errors-password"></span>

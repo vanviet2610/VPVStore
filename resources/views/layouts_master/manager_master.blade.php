@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     @yield('title')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Responsive bootstrap 4 admin template" name="description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- App css -->
-    <link href="{{ asset('manager/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"
-        id="bootstrap-stylesheet">
+    <link href="{{ asset('manager/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{ asset('manager/css/icons.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('manager/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-stylesheet">
     @stack('css')
